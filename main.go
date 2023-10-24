@@ -62,7 +62,7 @@ func main() {
 
 			body := &bytes.Buffer{}
 			writer := multipart.NewWriter(body)
-			part, err := writer.CreateFormFile("image", filepath.Base(filePath))
+			part, err := writer.CreateFormFile("images", filepath.Base(filePath))
 			if err != nil {
 				fileObj.Close() // Close the file before skipping
 				fmt.Println("Error creating form file", err)
